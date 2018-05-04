@@ -11,7 +11,7 @@ cd matplotlib_logo
 python setup.py install
 ```
 
-### Examples:
+## Examples:
 
 See examples/logo_example.ipynb to get idea of how to make these
 
