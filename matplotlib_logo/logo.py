@@ -61,7 +61,7 @@ ALPHABETS = {
         ('R', np.array([0.5, 0., 0.5, 0.])),
         ('Y', np.array([0., 0.5, 0., 0.5])),
         ('S', np.array([0., 0.5, 0.5, 0.])),
-        ('W', np.array([0.5, 0., 0., 0.25])),
+        ('W', np.array([0.5, 0., 0., 0.5])),
         ('K', np.array([0., 0., 0.5, 0.5])),
         ('M', np.array([0.5, 0.5, 0., 0.])),
         ('B', np.array([0., 1./3, 1./3, 1./3])),
@@ -122,7 +122,7 @@ def calculate_bits(counts, entropy):
 
 
 def _make_alphabet(characters):
-    alphabet = {}
+    alphabet = OrderedDict()
     for char, row in zip(characters, np.eye(len(characters))):
         alphabet[char] = row
     return alphabet
