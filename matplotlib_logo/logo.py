@@ -153,7 +153,7 @@ def _get_base_imgs(alphabet, path=None, cmap=None):
     base_imgs = {}
     for base in alphabet:
         fn = os.path.join(path, '{}.pk'.format(base))
-        img = np.load(fn)
+        img = np.load(fn, allow_pickle=True)
         try:
             img += colors.to_rgba(cmap[base], alpha=0)
         except KeyError:
